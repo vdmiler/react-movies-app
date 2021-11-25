@@ -1,0 +1,19 @@
+.filters {
+   display: flex;
+   .filters-title {
+      margin-right: 20px;
+   }
+   .filters-item:not(:last-child) {
+      margin-right: 15px;
+   }
+
+   .filters-item {
+      [type="radio"].with-gap:checked+span:before {
+         border-color: #78909c;
+      }
+      [type="radio"].with-gap:checked+span:after {
+         border-color: #78909c;
+         background-color: #78909c;
+      }
+   }
+}
