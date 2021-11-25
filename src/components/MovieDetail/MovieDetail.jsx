@@ -37,7 +37,6 @@ class MovieDetail extends Component {
          Plot
       } = this.state.details;
       const { loading } = this.state;
-      console.log(this.state.details)
       return (
          loading ? <Loader /> :
             <div className="container">
