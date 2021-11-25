@@ -9,7 +9,7 @@ class MovieDetail extends Component {
    }
 
    componentDidMount() {
-      fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&i=${this.props.location.state}`)
+      fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&i=${this.props.location.state}`)
          .then(response => response.json())
          .then(data => {
             if (data) {
@@ -18,6 +18,10 @@ class MovieDetail extends Component {
                   loading: false,
                })
             }
+         })
+         .catch(err => {
+            console.error(err);
+            this.setState({ loading: false });
          })
    }
    render() {

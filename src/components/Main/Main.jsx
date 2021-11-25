@@ -21,7 +21,7 @@ class Main extends Component {
    }
 
    fetchMovies = (search, filter = '', page = 1) => {
-      fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${search}${filter !== '' ? '&type=' + filter : ''}&page=${page}`)
+      fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${search}${filter !== '' ? '&type=' + filter : ''}&page=${page}`)
          .then(response => response.json())
          .then(data => {
             if (data) {
@@ -34,10 +34,18 @@ class Main extends Component {
                })
             }
          })
+         .catch(err => {
+            console.error(err);
+            this.setState({
+               data: {
+                  loading: false
+               }
+            });
+         })
    }
 
    componentDidMount() {
-      fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=matrix`)
+      fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=matrix`)
          .then(response => response.json())
          .then(data => {
             if (data) {
@@ -49,6 +57,14 @@ class Main extends Component {
                   }
                })
             }
+         })
+         .catch(err => {
+            console.error(err);
+            this.setState({
+               data: {
+                  loading: false
+               }
+            });
          })
    }
 
