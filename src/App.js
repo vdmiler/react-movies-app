@@ -16,22 +16,22 @@ const App = () => {
         <div className="container">
           <Switch>
             <Route
-              path="/react-movies-app"
+              path="/"
               exact
               component={Main}
             />
             <Route
-              path="/react-movies-app/help"
+              path="/help"
               exact
               component={Help}
             />
             <Route
-              path="/react-movies-app/contacts"
+              path="/contacts"
               exact
               component={Contacts}
             />
             <Route
-              path="/react-movies-app/movies/:name"
+              path="/movies/:name"
               exact
               component={MovieDetail}
             />

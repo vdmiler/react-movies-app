@@ -11,6 +11,7 @@ const Header = () => {
                <div className="nav-wrapper">
                   <NavLink
                      to="/"
+                     exact
                      className="brand-logo"
                   >
                      <i className="large material-icons">movie_filter</i> Films
