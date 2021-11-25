@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router';
+import { Route, Switch } from 'react-router';
 import './App.scss';
 import Contacts from './components/Contacts/Contacts';
 import Footer from './components/Footer/Footer';
@@ -14,26 +14,28 @@ const App = () => {
       <Header />
       <div className="main">
         <div className="container">
-          <Route
-            path="/"
-            exact
-            component={Main}
-          />
-          <Route
-            path="/help"
-            exact
-            component={Help}
-          />
-          <Route
-            path="/contacts"
-            exact
-            component={Contacts}
-          />
-          <Route
-            path="/movies/:name"
-            exact
-            component={MovieDetail}
-          />
+          <Switch>
+            <Route
+              path="/"
+              exact
+              component={Main}
+            />
+            <Route
+              path="/help"
+              exact
+              component={Help}
+            />
+            <Route
+              path="/contacts"
+              exact
+              component={Contacts}
+            />
+            <Route
+              path="/movies/:name"
+              exact
+              component={MovieDetail}
+            />
+          </Switch>
         </div>
       </div>
       <Footer />
