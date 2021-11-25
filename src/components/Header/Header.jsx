@@ -23,6 +23,7 @@ const Header = () => {
                               <li key={item.id}>
                                  <NavLink
                                     to={item.path}
+                                    exact
                                  >
                                     {item.label}
                                  </NavLink>
