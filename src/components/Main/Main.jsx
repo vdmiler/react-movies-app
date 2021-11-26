@@ -14,7 +14,7 @@ class Main extends Component {
          loading: true,
       },
       sorting: {
-         search: 'matrix',
+         search: 'blade',
          filter: '',
          page: 1
       }
@@ -45,7 +45,7 @@ class Main extends Component {
    }
 
    componentDidMount() {
-      fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=matrix`)
+      fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=blade`)
          .then(response => response.json())
          .then(data => {
             if (data) {
