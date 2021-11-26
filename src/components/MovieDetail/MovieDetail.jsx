@@ -9,7 +9,10 @@ class MovieDetail extends Component {
    }
 
    componentDidMount() {
-      fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&i=${this.props.location.state}`)
+      const path = this.props.match.params.name;
+      const arr = path.split('-');
+      const id = arr[arr.length - 1];
+      fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&i=${id}`)
          .then(response => response.json())
          .then(data => {
             if (data) {
