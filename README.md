@@ -1,5 +1,7 @@
 ## React Movies Portfolio Project
 
+![fimls](https://user-images.githubusercontent.com/64083482/145098721-87e30e9c-fa89-4885-9957-fcf5ad8101d8.gif)
+
 In this project I mastered:
 
 * React
